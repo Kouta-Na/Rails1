@@ -1,5 +1,5 @@
 <h3>予定一覧</h3>
-
+<p><%= link_to "新規追加", :new_schedule %></p>
 <table>
   <thead>
     <tr>
@@ -11,4 +11,18 @@
       <th>更新日時</th>
     </tr>
   </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.id %></td>
+        <td><%= schedule.title %></td>
+        <td><%= schedule.start_date %></td>
+        <td><%= schedule.end_date %></td>
+        <td><%= schedule.allday %></td>
+        <td><%= schedule.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
 </table>
