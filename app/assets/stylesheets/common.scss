@@ -6,6 +6,11 @@ header h4{
   padding: 10px 0;
 }
 
+.container{
+  margin: auto;
+  max-width: 980px;
+}
+
 table{
   border-collapse: separate;
   border-spacing: 0;
@@ -33,7 +38,7 @@ body{
 }
 
 .content{
-  margin: 0 20%;
+
   display: flex;
   justify-content: space-between;
 }
