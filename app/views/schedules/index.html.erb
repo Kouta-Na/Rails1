@@ -1,28 +1,42 @@
-<h3>予定一覧</h3>
-<p><%= link_to "新規追加", :new_schedule %></p>
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>タイトル</th>
-      <th>開始日</th>
-      <th>終了日</th>
-      <th>終日</th>
-      <th>更新日時</th>
-    </tr>
-  </thead>
+<div class=IndexContainer>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  
+  <div class=content>
+    <h3>予定一覧</h3>
+    <p><%= link_to "新規追加", :new_schedule %></p>
+  </div>
 
-  <tbody>
-    <% @schedules.each do |schedule| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= schedule.id %></td>
-        <td><%= schedule.title %></td>
-        <td><%= schedule.start_date %></td>
-        <td><%= schedule.end_date %></td>
-        <td><%= schedule.allday %></td>
-        <td><%= schedule.updated_at %></td>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
 
-</table>
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td><%= schedule.title %></td>
+          <td><%= schedule.start_date.to_s(:date_jp) %></td>
+          <td><%= schedule.end_date.to_s(:date_jp) %></td>
+          <td>
+            <% if schedule.allday == "1" %>
+              ⚪︎
+            <% end %>
+          </td>
+          <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+          <td><%= link_to "詳細", schedule %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

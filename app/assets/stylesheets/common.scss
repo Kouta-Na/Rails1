@@ -1,13 +1,39 @@
+header h4{
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 10px 0;
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+}
 
 table th{
-  /* background-color: #fbc25b; */
+  background-color: white;
   padding: 10px 20px;
 }
 
 table td{
+  background-color: white;
   padding: 10px 20px;
 }
 
 .notice{
+  background-color: white;
   padding: 5px;
+}
+
+body{
+  background-color: #dcdcdc;
+  margin: 0;
+}
+
+.content{
+  margin: 0 20%;
+  display: flex;
+  justify-content: space-between;
 }
