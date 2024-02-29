@@ -18,6 +18,8 @@
         <th>終日</th>
         <th>更新日時</th>
         <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
 
@@ -35,6 +37,8 @@
           </td>
           <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
           <td><%= link_to "詳細", schedule %></td>
+          <td><%= link_to "編集", [:edit, schedule] %></td>
+          <td><%= button_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
         </tr>
       <% end %>
     </tbody>
