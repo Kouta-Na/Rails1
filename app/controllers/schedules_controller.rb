@@ -13,6 +13,7 @@ class SchedulesController < ApplicationController
       flash[:notice] = "予定を新規追加しました"
       redirect_to :schedules
     else
+      flash[:notice] = "予定を新規追加に失敗しました"
       render "new"
     end
   end
@@ -31,6 +32,7 @@ class SchedulesController < ApplicationController
       flash[:notice] = "スケジュールIDが「#{@schedule.id}」の情報を更新しました"
       redirect_to :schedules
     else
+      flash[:notice] = "更新に失敗しました"
       render "edit"
     end
   end

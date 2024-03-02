@@ -58,3 +58,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rename'
 
 gem 'bootstrap3-datetimepicker-rails'
+
+gem 'rails-i18n'
+
+gem 'data-confirm-modal'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '3.4.1'

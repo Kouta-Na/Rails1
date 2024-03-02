@@ -1,6 +1,8 @@
 <div class=NewContainer>
   <h3 class=NewPageTitle>予定の新規追加</h3>
 
+  <%= render "shared/error", obj: @schedule %>
+
   <section class=NewForm>
     <%= form_with model: @schedule do |f| %>
       <table class=NewTable>

@@ -38,9 +38,16 @@
           <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
           <td><%= link_to "詳細", schedule %></td>
           <td><%= link_to "編集", [:edit, schedule] %></td>
-          <td><%= button_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+          <td><%= link_to "削除", schedule, method: :delete, data: { confirm: "本当に削除しますか？", cancel: "やめる", commit: "削除する" }, title: "削除確認" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+
+  <footer class=ontent>
+    <div class=footer>
+      <p>予定の合計 <%= @schedules.count %>件</p>
+      <p>本日の日付 <%= Date.today.to_s(:date_jp) %></p>
+    </div>
+  </footer>
 </div>
