@@ -8,5 +8,6 @@ class Schedule < ApplicationRecord
   def select_date?
     return if start_date.blank? || end_date.blank?
     errors.add(:end_date, "は開始日以降のものを選択してください") if start_date > end_date
+    errors.add(:end_date, "は開始日以降のものを選択してください") if start_date == end_date
   end
 end
