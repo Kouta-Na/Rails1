@@ -1,0 +1,30 @@
+<div class=showContainer>
+  <p><%= link_to "一覧に戻る", :schedules %>
+  <div class=content>
+    <p><%= @schedule.title %></p>
+    <p><%= link_to "編集", :edit_schedule %></p>
+  </div>
+
+  <table class=showTable>
+    <tr>
+      <th>開始日</th>
+      <td><%= @schedule.start_date.to_s(:date_jp) %></td>
+    </tr>
+    <tr>
+      <th>終了日</th>
+      <td><%= @schedule.end_date.to_s(:date_jp) %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <td>
+        <% if @schedule.allday == "1" %>
+          ⚪︎
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>スケジュールメモ</th>
+      <td><%= @schedule.memo %></td>
+    </tr>
+  </table>
+</div>

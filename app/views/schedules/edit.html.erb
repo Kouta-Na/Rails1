@@ -1,0 +1,43 @@
+<div class=NewContainer>
+  <h3 class=NewPageTitle>予定を編集してください</h3>
+
+  <%= render "shared/error", obj: @schedule %>
+
+  <section class=NewForm>
+    <%= form_with model: @schedule do |f| %>
+      <table class=NewTable>
+        <tr>
+          <th><%= f.label :title ,"タイトル" %></th>
+          <td><%= f.text_field :title, placeholder: "タイトル", size: 50 %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :start_date ,"開始日" %></th>
+          <td><%= f.text_field :start_date, placeholder: "---- / -- / --", :class => 'datepicker' %></td>
+          
+        </tr>
+        <tr>
+          <th><%= f.label :end_date ,"終了日" %></th>
+          <td><%= f.text_field :end_date, placeholder: "---- / -- / --" %></td>
+        </tr>
+        <tr class=NewBox>
+          <td><%= f.check_box :allday %></td>
+          <th><%= f.label :allday ,"終日の場合はチェックを入れます" %></th>
+        </tr>
+        <tr>
+          <th><%= f.label :memo ,"スケジュールメモ" %></th>
+          <td><%= f.text_area :memo, placeholder: "メモを入力する", size: "50x5" %></td>
+        </tr>
+      </table>
+      <div>
+        <ul class=NewFormContainer_button>
+          <li><%= link_to "キャンセル", :schedules %></li>
+          <li><%= f.submit "保存" %></li>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</div>
+
+
+

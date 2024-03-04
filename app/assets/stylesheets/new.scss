@@ -1,0 +1,41 @@
+.NewContainer{
+  margin: auto;
+  max-width: 640px;
+}
+
+.NewForm{
+  position: relative;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.NewTable{
+  margin: 0;
+}
+
+.NewTable th{
+  padding: 0 0 8px 0;
+}
+
+.NewTable td{
+  padding: 0 0 8px 5px;
+}
+
+.NewBox td{
+  text-align: right;
+}
+
+.NewBox th{
+  text-align: left;
+}
+
+.NewFormContainer_button{
+  justify-content: end;
+  display: flex;
+  list-style: none;
+}
+
+.NewFormContainer_button li{
+  padding: 5px;
+}

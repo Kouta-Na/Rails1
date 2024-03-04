@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.4'
+ruby '3.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
+gem 'rails', '= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -54,3 +54,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'rename'
+
+gem 'bootstrap3-datetimepicker-rails'
+
+gem 'rails-i18n'
+
+gem 'data-confirm-modal'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '3.4.1'
